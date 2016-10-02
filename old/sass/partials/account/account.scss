@@ -1,0 +1,101 @@
+#account {
+  header {
+
+    padding: 10px 5px;
+    background-color: $blue1;
+    height: 55px;
+    color: white;
+    h3 {
+      padding: 0 10px;
+      line-height: 34px;
+      @media screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+  form {
+    background-color: $grey5;
+    border: 1px solid $grey3;
+    border-radius: 1px;
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .resetPasswordPanel {
+    background: white;
+    margin-top: 10vh;
+    overflow: hidden;
+    padding: 10px 20px;
+  }
+  h4 {
+    padding: 10px 0;
+  }
+
+
+
+  /*      ORDERS       */
+  table.orderReviews {
+    margin-top:30px;
+    margin-bottom:60px;
+    width: 100%;
+    thead {
+      background-color: $grey3;
+      border: 1px solid $grey2;
+      tr {
+        th {
+          &:nth-child(5) {
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+          &:nth-child(3) {
+            @media screen and (max-width: 620px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      background-color: $grey4;
+      border: 1px solid $grey3;
+      tr {
+        &.orderReview {
+          border-bottom: 1px solid $grey2;
+        }
+        td {
+          height:60px;
+          text-align: center;
+          vertical-align: middle;
+          @media screen and (max-width: 500px) {
+            font-size:80%;
+          }
+          .product {
+
+            .productName {
+              width: 70%;
+              padding: 0px 3px;
+              float: left;
+            }
+            .productAmount {
+              width: 30%;
+              padding: 0px 3px;
+              float: right;
+            }
+          }
+          &.orderPaymentMethod {
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+          &.orderedProducts {
+            @media screen and (max-width: 620px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,27 @@
+
+
+    <form class="span_1_of_3 float-middle popUpContainer " ng-submit="loginSubmit()">
+        <br>
+        <h4>If you already have an account, login now and we'll help you with the shopping. </h4>
+        <input type="email"  placeholder="E-Mail" ng-model="login.email" required>
+        <input type="password"  placeholder="Password" ng-model="login.password" required >
+
+        <a class="small span_2_of_2 float-right" ng-click="login.resetPasswordPanel=true">Forgot password? Reset it!</a>
+
+        <label class="error message span_2_of_2" >{{login.errorMessage}}</label>
+        <input class="btn red invert  float-left" value="Cancell" ng-click="closeThisDialog('Some value')">
+        <input type="submit" class="btn green invert  float-right" value="Login">
+        <div class="spacer float-right"></div>
+    </form>
+
+<div class="popUpBackGround span2of2"  ng-init="login.resetPasswordPanel=false" ng-show="login.resetPasswordPanel==true" >
+    <div class="popUpContainer span_1_of_3 float-middle" >
+        <label>Can't remember your password?</label><br>
+        <label>Enter your email here and we'll send you a new one</label>
+        <form ng-submit="sendResetPassword()">
+            <input type="email" placeholder="Email" ng-model="login.email">
+            <input class="btn red invert  float-left" value="Cancell" ng-click="login.resetPasswordPanel=false">
+            <input type="submit" class="btn green invert  float-right" value="Send">
+        </form>
+    </div>
+</div>

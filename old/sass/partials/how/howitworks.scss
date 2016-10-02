@@ -1,0 +1,42 @@
+#how{
+header{
+    padding: 10px 5px;
+    background-color: $blue1;
+    height: 55px;
+    color: white;
+    h3{
+      padding: 0 10px;
+      line-height: 34px;
+      @media screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+    nav{
+      position:relative;
+      top:35px;
+      left: 50%;
+      margin-left: -180px;
+      max-width:380px;
+      ul{
+        display: inline;
+        list-style: none;
+        li{
+          text-align: center;
+          display: inline-block;
+          border: 1px solid #008000;
+          min-width:120px;
+          background-color:white;
+        }
+      }
+    }
+  h5{
+    margin: 20px 0;
+  }
+  .contentBox{
+    border-radius: 3px;
+    background-color: $grey5;
+    border: 1px solid $grey3;
+    padding: 10px;
+  }
+}

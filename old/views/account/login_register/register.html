@@ -1,0 +1,21 @@
+<div ng-controller="registerController">
+    <header class="">
+        <div class="row">
+            <h3 class="float-left">Sign up</h3>
+        </div>
+    </header>
+
+    <div class="row">
+        <form class="span_3_of_4 float-middle group" ng-submit="registerSubmit()">
+            <h4>Please complete this information to sign up</h4>
+            <input type="email" id="email" placeholder="E-Mail" ng-model="email" required>
+            <input type="password" id="password1" placeholder="Password" ng-model="password" required minlength="6">
+            <input type="password" id="password2" placeholder="Repeat your password" ng-model="password2" required>
+            <label class="error message">{{errorMessage}}</label>
+
+            <label  class="small span_2_of_2 float-left"><a ui-sref="index.account.login">Already have an account? Login!</a></label>
+            <input type="submit" class="btn green invert float-right" value="Sign Up">
+            <div class="spacer float-right"></div>
+        </form>
+    </div>
+</div>

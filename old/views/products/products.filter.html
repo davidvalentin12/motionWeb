@@ -1,0 +1,53 @@
+<!-- Products Header -->
+<header class="">
+    <div class="row">
+        <h3 class="float-left">Our Products</h3>
+
+        <a ui-sref="index.products.cart" class="float-right btn blue full invert cart"><label>Cart </label><i
+                class="fa fa-1x fa-shopping-cart"></i></a>
+    </div>
+</header>
+
+
+<!-- Product Display on Filter -->
+<section>
+    <!-- Filter -->
+    <div class="span_2_of_2 float-right" id="filter">
+        <div class="row">
+            <ul>
+                <li class="searchFilter">
+                    <input type="search" placeholder="search" ng-model="search.name" class="float-left">
+                    <i class="fa fa-x1 fa-search float-right hvr-grow"></i>
+                </li>
+                <li tabindex="0" class="filterBtn">
+                    <label>Filter</label><i class="fa fa-1x fa-th-list"></i>
+                    <ul class="shadowFloat">
+                        <li ng-repeat="type in getTypes() track by $index">
+                            <label for="check{{$index}}">
+                                <input id="check{{$index}}" type="checkbox" ng-model="filter[type]"/> {{type}}
+                            </label>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- !Filter -->
+    <div class="section group products">
+        <div class="row">
+            <div ng-repeat="product in filtered=(products | filter:filterByType | filter:search) track by $index"
+                 class="col span_1_of_4 product">
+                <a ui-sref="index.products.product({productname: '{{product.name}}', })">
+                    <img class="productImage span_2_of_2" ng-src="{{product.image}}">
+                </a>
+                <label class="span_2_of_2 productName t-center">{{product.name}}</label>
+                <label class="span_2_of_2 productPrice t-center">{{product.Price}}&euro;</label>
+                <a ui-sref="index.products.product({productname: '{{product.name}}', })">
+                    <label class="span_2_of_2 productDetails float-right btn green">Details</label>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Product Display on Filter -->

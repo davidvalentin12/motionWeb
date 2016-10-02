@@ -1,0 +1,11 @@
+<section class="span_4_of_4 float-left shoppingResume" ng-controller="shoppingCartController">
+    <h4>Your order review:</h4>
+    <div class="noitems t-center" ng-show="noItems()"><label>You haven't added any products to your shopping cart yet</label></div>
+    <div  class="product" ng-repeat="product in products" ng-if="shoppingCart[product.$id].amount!=null">
+        <label>{{product.name}}</label><label class="amount float-right">x{{shoppingCart[product.$id].amount}}</label>
+    </div>
+    <h4>Total price</h4>
+    <div class="span_2_of_2 t-center">
+    <label class="totalPrice">{{totalPrice() | number:2}}&euro;</label>
+    </div>
+</section>

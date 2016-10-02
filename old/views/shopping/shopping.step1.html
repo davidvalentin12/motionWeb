@@ -1,0 +1,92 @@
+<header class="">
+    <div class="row">
+        <a ui-sref="index.products.cart" class="float-left btn blue full invert cart "><i
+                class="fa fa-1x fa-arrow-left"> </i><label>
+            Back to Cart </label> <i
+                class="fa fa-1x fa-shopping-cart"></i></a>
+
+        <h3 class="float-left">Personal Information</h3>
+    </div>
+</header>
+
+<div class="row">
+    <div class="section group">
+        <form ng-submit="step1Submit(user.firstname, user.lastname, user.idType, user.idNumber, user.tlf, user.email, user.password1, user.password2)" class="span_3_of_4 float-right form">
+            <div class="formGroup group">
+                <label class="span_2_of_2 float-left">Identification *</label>
+                <!--firstname-->
+                <div class=" span_1_of_2 float-left">
+                    <input type="text" id="firstname" ng-model="user.firstname" placeholder="" required>
+                    <label for="firstname" class="for">Firstname</label>
+                </div>
+                <!--lastname-->
+                <div class=" span_1_of_2 float-right">
+                    <input type="text" id="lastname" ng-model="user.lastname" placeholder="" required>
+                    <label for="Lastname" class="for">Lastname</label>
+                </div>
+                <!-- ID -->
+                <div class=" span_1_of_2 float-left">
+                    <select  ng-model="user.idType">
+                        <option value="nif">N.I.F</option>
+                        <option value="nie">N.I.E</option>
+                        <option value="dni">D.N.I</option>
+                    </select>
+                    <label class="for">Document type</label>
+                </div>
+
+                <div class=" span_1_of_2 float-right">
+                    <input ng-if="user.idType=='dni'" type="text" id="dn" ng-model="user.idNumber" placeholder="" required>
+                    <!--pattern="[0-9]{8}[a-zA-Z]" -->
+             <input ng-if="user.idType=='nie'" type="text" id="dn" ng-model="user.idNumber" placeholder="" required>
+                    <!--pattern="[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]" -->
+                    <input ng-if="user.idType=='nif'" type="text" id="dn" ng-model="user.idNumber" placeholder="" required>
+                    <!-- pattern="[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]" -->
+              <label for="Lastname" class="for">Document Number</label>
+          </div>
+      </div>
+      <!--Contact-->
+            <div class="formGroup group">
+                <label class="span_2_of_2 float-left">Contact *</label>
+                <div class=" span_2_of_2 float-right">
+                    <input type="text" id="telephone" ng-model="user.tlf" placeholder="" required>
+                    <label class="for">Telephone number</label>
+                </div>
+
+
+
+                <div ng-if="user.$id!=null" class=" span_2_of_2 float-left">
+                    <input type="email" ng-model="user.email" placeholder="" readonly>
+                    <label class="for">Email: if you want to change your email address, you'll have to do it in your account settings</label>
+                </div>
+                <div ng-if="user.$id==null">
+                <div class=" span_2_of_2 float-left">
+                    <input type="email" ng-model="user.email" placeholder="" required>
+                    <label class="for">Email</label>
+                </div>
+
+                <label class="span_2_of_2 float-left">Insert a password and we'll create you a personal account to review your shoppings, identified by your email.*</label>
+                <!--password1-->
+                <div class=" span_1_of_2 float-left">
+                    <input type="password" id="firstname" ng-model="user.password1" placeholder="" required>
+                    <label for="firstname" class="for">Password</label>
+                </div>
+                <!--password2-->
+                <div class=" span_1_of_2 float-right">
+                    <input type="password" id="lastname" ng-model="user.password2" placeholder="" required>
+                    <label for="Lastname" class="for">Repeat Password</label>
+                </div>
+                </div>
+            </div>
+<label >{{errorMessage}}</label>
+            <div class="span_1_of_3 float-right">
+                <input type="submit" value="Continue" class="btn green span_1_of_2 float-right"/>
+            </div>
+        </form>
+        <div class="span_1_of_4">
+        <shoppingresume></shoppingresume>
+        </div>
+    </div>
+    <!--<loginpanel></loginpanel>-->
+
+
+</div>

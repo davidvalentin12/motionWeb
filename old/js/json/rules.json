@@ -1,0 +1,77 @@
+{
+  "rules": {
+    "mocean": {
+      "orders": {
+        "$orderID": {
+          "TIMESTAMP": {
+            ".validate": "newData.val() <= now"
+          },
+          "address1": {
+            ".validate": "newData.isString()"
+          },
+          "address2": {
+            ".validate": "newData.isString()"
+          },
+          "cart": {
+            ".write": true,
+            ".read": true,
+            "totalPrice": {".validate": "newData.isNumber()"}
+          },
+          "city": {
+            ".validate": "newData.isString()"
+          },
+          "email": {
+            ".validate": "newData.isString() && newData.val().contains('@')"
+          },
+          "firstname": {
+            ".validate": "newData.isString()"
+          },
+          "idNumber": {
+            ".validate": "newData.isString()"
+          },
+          "idType": {
+            ".validate": "newData.val() ==='nif' || newData.val() ==='nie' || newData.val() ==='dni' "
+          },
+          "lastname": {
+            ".validate": "newData.isString()"
+          },
+          "orderID": {".validate": "newData.val() === $orderID"},
+          "selectedMethod": {".validate": "newData.val() ==='ondelivery' || newData.val() ==='creditcard' "},
+          "state": {
+            ".validate": "newData.isString()"
+          },
+          "status": {
+            ".validate": "newData.val() ==='Ordered' "
+          },
+          "tlf": {
+            ".validate": "newData.val().matches(/[0-9]{9}/)"
+          },
+          "uid": {".validate": "newData.isString()"},
+          "zip": {
+            ".validate": "newData.isString()"
+          },
+          ".write": true,
+          ".read": true
+        }
+      },
+      "products": {
+        ".read": true,
+        ".write": false
+      },
+      "taglines": {
+        ".read": true,
+        ".write": false
+      },
+      "users": {
+        "$userID": {
+          ".write": "$userID === auth.uid",
+          ".read": "$userID === auth.uid"
+        }
+      }
+    },
+    "zapier_queue": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

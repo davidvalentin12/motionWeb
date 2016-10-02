@@ -1,0 +1,78 @@
+<header id="header">
+
+    <div class="section group" ng-init="global.tab = 1">
+        <div class="row" ng-controller="menuController">
+            <i class="fa fa-bars fa-2x" ng-click="toggleDropDown()"></i>
+
+            <a ui-sref="index.home">
+                <div class=" logo_wrapper">
+                    <img src="img/logo.png">
+                </div>
+            </a>
+
+
+            <nav>
+                <ul class="dropdownnav" ng-show="dropDown">
+                    <li ng-click="toggleDropDown()" ui-sref="index.home" class="hvr-underline-from-left"><i
+                            class="fa fa-home"></i>Homes
+                    </li>
+                    <li ng-click="toggleDropDown()" ui-sref="index.how" class="hvr-underline-from-left">Idea
+                    </li>
+                    <li ng-click="toggleDropDown()" ui-sref="index.products" class="hvr-underline-from-left">Products
+                    </li>
+                    <li tabindex="0" class="hvr-underline-from-left">About us
+                        <ul>
+                            <li ng-click="toggleDropDown()" ui-sref="index.company" class="hvr-underline-reveal">
+                                Our Team
+                            </li>
+                            <li ng-click="toggleDropDown()" ui-sref="index.contact" class="hvr-underline-reveal">
+                                Contact
+                            </li>
+                        </ul>
+                    </li>
+                    <li tabindex="0" class="hvr-underline-from-left">My Account
+                        <ul ng-if="!global.login">
+                            <li ng-click="toggleDropDown()" ui-sref="index.account.login" ng-if="!global.login"
+                                class="hvr-underline-reveal">Login<i class="fa fa-1x fa-sign-in"></i></li>
+                            <li ng-click="toggleDropDown()" ui-sref="index.account.register" ng-if="!global.login"
+                                class="hvr-underline-reveal">Sign Up
+                            </li>
+                        </ul>
+                        <ul ng-if="global.login">
+                            <li ng-click="toggleDropDown()" ui-sref="index.products.cart" class="hvr-underline-reveal">Your Cart <i class="fa fa-1x fa-shopping-cart"></i></li>
+                            <li ng-click="toggleDropDown()" ui-sref="index.account.orders" class="hvr-underline-reveal">Orders</li>
+                            <li  ng-click="toggleDropDown()" ui-sref="index.account.profile" class="hvr-underline-reveal">Settings</li>
+                            <li ng-click="logout()" class="hvr-underline-reveal">Logout<i class="fa fa-1x fa-sign-out"></i></li>
+                        </ul>
+                    </li>
+                    <li ng-click="toggleDropDown()" class="t-center"><i class="fa fa-2x fa-arrow-up"></i></li>
+                </ul>
+                <ul class="horizontalnav">
+                    <li ui-sref="index.home" class="hvr-underline-from-center"><i class="fa fa-home"></i>Home</li>
+                    <li ui-sref="index.how" class="hvr-underline-from-center">Idea</li>
+                    <li ui-sref="index.products" class="hvr-underline-from-center">Products</li>
+                    <li tabindex="0">About us
+                        <ul>
+                            <li ui-sref="index.company" class="hvr-underline-reveal">Our Team</li>
+                            <li ui-sref="index.contact" class="hvr-underline-reveal">Contact</li>
+                        </ul>
+                    </li>
+                    <li>My Account
+                        <ul ng-if="!global.login">
+                            <li ui-sref="index.account.login" ng-if="!global.login" class="hvr-underline-reveal">Login <i
+                                    class="fa fa-1x fa-sign-in"></i></li>
+                            <li ui-sref="index.account.register" ng-if="!global.login" class="hvr-underline-reveal">Sign Up</li>
+                        </ul>
+                        <ul ng-if="global.login">
+                            <li ui-sref="index.products.cart" class="hvr-underline-reveal">Your Cart <i class="fa fa-1x fa-shopping-cart"></i></li>
+                            <li ui-sref="index.account.orders" class="hvr-underline-reveal">Orders</li>
+                            <li ui-sref="index.account.profile" class="hvr-underline-reveal">Settings</li>
+                            <li ng-click="logout()" class="hvr-underline-reveal">Logout <i class="fa fa-1x fa-sign-out"></i>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

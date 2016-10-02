@@ -1,0 +1,307 @@
+#cart {
+  header{
+    h3{
+      @media screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      label{
+        display:none;
+      }
+    }
+
+  }
+
+  table.cartTable{
+
+    width: 100%;
+    .noitems{
+      h5{
+        margin:20px 10px;
+      }
+    }
+    thead {
+      background: $grey3;
+      border-bottom: 1px solid $grey2;
+      border-right: 1px solid $grey2;
+      border-left: 1px solid $grey2;
+      font-weight: bold;
+      text-align: center;
+      padding:5px;
+
+      tr {
+        th {
+          height:50px;
+          vertical-align: middle;
+          &:nth-child(1) {
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+          &:nth-child(3) {
+            @media screen and (max-width: 620px) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    tbody{
+      border: 1px solid $grey3;
+    }
+    tr.productRow {
+      vertical-align: top;
+      td{
+        padding:10px;
+        vertical-align: middle;
+        text-align: center;
+        &:nth-child(1) {
+          @media screen and (max-width: 720px) {
+            display: none;
+          }
+        }
+        &:nth-child(3) {
+          @media screen and (max-width: 620px) {
+            display: none;
+          }
+        }
+        @media screen and (max-width: 400px) {
+          font-size:90%;
+        }
+        &.unit {
+          .plusUnits {
+            width: 100%;
+            text-align: center;
+            label {
+              padding: 5px 10px;
+              border: 1px solid #008000;
+            }
+          }
+          .amountUnits {
+            margin:10px 0;
+            width: 100%;
+            text-align: center;
+            input[type=number]{
+              text-align: center;
+              outline: 0;
+              -webkit-appearance:none;
+              -moz-appearance:none;
+              appearance:none;
+              width:33px;
+              &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+                margin: 0;
+              }
+              &:focus{
+                outline: 0;
+              }
+            }
+          }
+          .minusUnits {
+            width: 100%;
+            text-align: center;
+            label {
+              padding: 5px 10px;
+              border: 1px solid #ff0000;
+            }
+          }
+        }
+      }
+    }
+  }
+  div.totalfinal {
+    line-height: 30px;
+    background-color: $grey3;
+    border-bottom: 1px solid $grey2;
+    border-top: 1px solid $grey2;
+    text-align: center;
+    div {
+      &.totalprice{
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          width: 25.33%;
+        }
+
+      }
+      &.totaltext{
+        width: 6.86%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          width: 25.33%;
+        }
+
+      }
+
+    }
+  }
+
+  .shoppingEnd{
+    margin:30px 0;
+  }
+}
+
+
+/*
+  .cartdisplay {
+
+    .th {
+      overflow: hidden;
+      background: $grey3;
+      border-bottom: 1px solid $grey2;
+      font-weight: bold;
+      .eliminar {
+        text-align: center;
+        line-height: 120px;
+        width: 6.86%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          display:none;
+        }
+      }
+      .imagen {
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+      }
+      .namedescription {
+        width: 32.26%;
+        margin: 1% 0 1% 1%;
+      }
+      .unitprice {
+        width: 15.33%;
+        margin: 1% 0 1% 1%
+      }
+      .unit {
+        width: 6.86%;
+        margin: 1% 0 1% 1%;
+      }
+      .total {
+        float:right;
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          width: 22%;
+        }
+      }
+    }
+    .tc {
+      float: left;
+      text-align: center;
+    }
+    .noitems{
+      h5{
+        margin:20px 10px;
+      }
+    }
+    .tr {
+      overflow: hidden;
+      .eliminar {
+        text-align: center;
+        line-height: 120px;
+        width: 6.86%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          display:none;
+        }
+      }
+      .imagen {
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+      }
+      .namedescription {
+        width: 32.26%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          vertical-align: middle;
+          p{
+            display:none;
+          }
+        }
+      }
+      .unitprice {
+        text-align: center;
+        line-height: 120px;
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+      }
+      .unit {
+        line-height: 40px;
+        width: 6.86%;
+        margin: 1% 0 1% 1%;
+        .plusUnits {
+          width: 100%;
+          text-align: center;
+          label {
+            padding: 5px 10px;
+            border: 1px solid #008000;
+          }
+        }
+        .amountUnits {
+          width: 100%;
+          text-align: center;
+          input[type=number]{
+            text-align: center;
+            outline: 0;
+            -webkit-appearance:none;
+            -moz-appearance:none;
+            appearance:none;
+            width:33px;
+            &::-webkit-inner-spin-button,&::-webkit-outer-spin-button{
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            &:focus{
+              outline: 0;
+            }
+          }
+        }
+        .minusUnits {
+          width: 100%;
+          text-align: center;
+          label {
+            padding: 5px 10px;
+            border: 1px solid #ff0000;
+          }
+        }
+      }
+      .total {
+        float:right;
+        text-align: center;
+        line-height: 120px;
+        width: 15.33%;
+        margin: 1% 0 1% 1%;
+        @media screen and (max-width: 420px) {
+          width: 22%;
+        }
+      }
+    }
+    .totalfinal {
+      line-height: 30px;
+      background-color: $grey3;
+      border-bottom: 1px solid $grey2;
+      border-top: 1px solid $grey2;
+      text-align: center;
+      div {
+        &.totalprice{
+          width: 15.33%;
+          margin: 1% 0 1% 1%;
+          @media screen and (max-width: 420px) {
+            width: 25.33%;
+          }
+
+        }
+        &.totaltext{
+          width: 6.86%;
+          margin: 1% 0 1% 1%;
+          @media screen and (max-width: 420px) {
+            width: 25.33%;
+          }
+
+        }
+
+      }
+    }
+  }
+
+*/

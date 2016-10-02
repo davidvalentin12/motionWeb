@@ -1,0 +1,95 @@
+[ {
+  "Capacity" : 166,
+  "Category" : "glass ",
+  "Price" : 14.75,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/champagneflute.png",
+  "name" : "Champagne Flute ",
+  "noVat" : 11.65,
+  "set4" : 59,
+  "description" : "These glasses are all constructed from high-end, FDA approved polycarbonate, a a truly amazing material that's made to resemble precisely fine crystal; its definition, mass, and luminosity. Each and every glass is finished by hand so as to get rid of any and all manufacturer join lines, giving it an elegant and more delicate look."
+}, {
+  "Capacity" : 384,
+  "Category" : "glass ",
+  "Price" : 17.25,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/wineglass.png",
+  "name" : " Wine Glass ",
+  "noVat" : 13.63,
+  "set4" : 69,
+  "description" : "Our glasses are all constructed from high-end, Food and Drug Administration approved polycarbonate, a remarkable material that's designed to look and feel almost identical to authentic glass; the translucence, mass, and brilliance. "
+}, {
+  "Capacity" : 296,
+  "Category" : "glass ",
+  "Price" : 12.25,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/tumbler.png",
+  "name" : " Tumbler ",
+  "noVat" : 9.68,
+  "set4" : 49,
+  "description" : "Your new tumblers are all constructed from high-end, FDA approved polycarbonate, a remarkable material that looks and feels exactly real glass; the translucence, weight, and sparkle."
+}, {
+  "Capacity" : 425,
+  "Category" : "glass ",
+  "Price" : 14.75,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/pilsner.png",
+  "name" : "Pilsner ",
+  "noVat" : 11.65,
+  "set4" : 59,
+  "description" : "Our glasses are all constructed of premium, FDA approved polycarbonate, a truly remarkable material that looks and feels exactly authentic glass; its translucence, heaviness, and sparkle. Each glass is hand finished so as to get rid of any and all manufacturer joint lines, giving it a more Upscale and elegant appearance."
+}, {
+  "Capacity" : 2365,
+  "Category" : "cooler",
+  "Price" : 44,
+  "image" : "/img/products/icebucket.png",
+  "name" : "Ice Bucket ",
+  "noVat" : 34.76,
+  "description" : "A sophisticated way to serve your favorite wines and champagne and complement your nautical decor"
+}, {
+  "Category" : "holder",
+  "Dimensions" : "75x1",
+  "Price" : 5.5,
+  "gif" : "/img/products/stainlessdisks.gif",
+  "image" : "/img/products/stainlessdisks.png",
+  "name" : "Magnetic steel disks",
+  "noVat" : 4.35,
+  "set4" : 22,
+  "description" : "A sophisticated way to hold your favorite wines and champagne on any given surface"
+}, {
+  "Category" : "holder",
+  "Dimensions" : "520x320x7",
+  "Price" : 49,
+  "gif" : "/img/products/siliconeplacemat.gif",
+  "image" : "/img/products/siliconeplacemat.png",
+  "name" : "Silicon place mat",
+  "noVat" : 38.71,
+  "description" : "Our silicon place mat is adaptable to any surface and is compatible with any of our sophisticated products"
+}, {
+  "Category" : "holder",
+  "Dimensions" : "250x250x0.5",
+  "Price" : 25,
+  "gif" : "/img/products/storagetray.gif",
+  "image" : "/img/products/storagetray.png",
+  "name" : "Storage tray ",
+  "noVat" : 19.75,
+  "description" : "Our storage tray is perfect to store our multiple glasses safely in any cupboard"
+}, {
+  "Category" : "holder",
+  "Dimensions" : "510x310x20",
+  "Price" : 29,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/carryingtray.png",
+  "name" : "Carrying tray",
+  "noVat" : 22.91,
+  "description" : "Our carrying tray is perfect to transport our multiple glasses safely from one place to another"
+}, {
+  "Category" : "cooler",
+  "Dimensions" : "90x110",
+  "Price" : 9.9,
+  "gif" : "/img/products/carryingtray.gif",
+  "image" : "/img/products/beercooler.png",
+  "name" : "Beer cooler",
+  "noVat" : 7.82,
+  "description" : "Our beer can cooler is the easiest way to secure your beer and keep it cool."
+} ]

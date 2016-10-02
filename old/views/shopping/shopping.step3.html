@@ -1,0 +1,29 @@
+<header class="section group">
+    <div class="row">
+
+        <h3 class="float-left">Shopping Complete!</h3>
+
+    </div>
+</header>
+
+<div class="row shoppingComplete">
+<div class="spacer"></div>
+    <h4 class="">Congratulations!</h4>
+    <h5 class="">Your have succesfully completed your shopping.</h5>
+    <div class="section group">
+        <section class="col span_1_of_2">
+            <shoppingresume></shoppingresume>
+            <p>You can overview all your orders in your account secction: <a class="btn blue" ui-sref="index.account.profile">Orders</a></p>
+        </section>
+        <section class="col span_1_of_2" ng-controller="contactController">
+            <form ng-submit="sendContactMessage()" class="group">
+                <h5 class="">For any further asistance contact us:</h5>
+                <input type="text" id="name" ng-model="name" placeholder="Name">
+                <input type="email" id="email" ng-model="email" placeholder="E-Mail">
+                <input type="text" id="tel" ng-model="tel" placeholder="Telephone Number">
+                <textarea id="message" ng-model="message" placeholder="Your message"></textarea>
+                <input type="submit" class="btn green float-right" value="Send Message">
+            </form>
+        </section>
+    </div>
+</div>

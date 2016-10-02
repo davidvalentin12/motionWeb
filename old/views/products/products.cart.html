@@ -1,0 +1,114 @@
+<div id="cart" ng-controller="shoppingCartController">
+
+    <header class="">
+        <div class="row">
+            <a ui-sref="index.products" class="float-left btn blue invert full"><i
+                    class="fa fa-1x fa-arrow-left"> </i><label> Continue Shopping
+            </label></a>
+
+            <h3 class="float-left">Your shopping cart</h3>
+
+            <a class="float-right btn green full invert" ng-show="!noItems()" ui-sref="index.shopping"
+               ng-click="confirmCart()"><label>Finish Shopping</label> <i class="fa fa-1x fa-arrow-right"></i></a>
+        </div>
+    </header>
+
+
+    <table ng-table class="group row cartTable ">
+        <tr class="productRow" ng-repeat="product in products" ng-if="shoppingCart[product.$id].amount!=null">
+            <td data-title="' Remove '" class="eliminar" ng-click="deleteFromCart(product.$id)">
+                <i class="fa fa-1x fa-trash-o btn red"></i>
+            </td>
+            <td data-title="'Image'" class="imagen"><img ng-src="{{product.image}}" width="auto" height="120px"></td>
+            <td data-title="'Name & Description'" class="namedescription">
+                <label>{{product.name}}</label>
+
+                <p>{{product.description}} </p>
+            </td>
+            <td data-title="'Unit Price'" class="unitprice">{{product.Price}}&euro;</td>
+            <td data-title="'Units'" class="unit">
+                <div class="plusUnits"><label class="btn green invert" ng-click="addToCart(product.$id,1)"><i
+                        class="fa fa-1x fa-plus"></i></label></div>
+                <div class="amountUnits"><input type="number" ng-model="shoppingCart[product.$id].amount" readonly>
+                </div>
+                <div class="minusUnits"><label class="btn red invert" ng-click="removeFromCart(product.$id,1)"><i
+                        class="fa fa-1x fa-minus"></i></label></div>
+            </td>
+            <td data-title="'Total Price'" class="total">{{(shoppingCart[product.$id].amount)*(product.Price) |
+                number:2}}€
+            </td>
+        </tr>
+
+    </table>
+    <div class="row totalfinal">
+        <div class="totalprice float-right">
+            <label>{{totalPrice() | number:2}}&euro;</label>
+        </div>
+        <div class="totaltext float-right">
+            <label>Total:</label>
+        </div>
+    </div>
+
+    <footer class="section group shoppingEnd">
+        <div class="row">
+            <a ui-sref="index.products" class="float-left btn blue"><i class="fa fa-1x fa-arrow-left"></i> Continue
+                Shopping
+            </a><label ng-show="!noItems()" class="float-right btn green" ui-sref="index.shopping"
+                       ng-click="confirmCart()">Finish Shopping  <i class="fa fa-1x fa-arrow-right"></i></label>
+        </div>
+    </footer>
+</div>
+
+
+<!--
+    <article class="cartdisplay">
+
+        <div class="th">
+            <div class="row">
+                <div class="tc eliminar"></div>
+                <div class="tc imagen">Image</div>
+                <div class="tc namedescription">Name and Description</div>
+                <div class="tc unitprice">Unit Price</div>
+                <div class="tc unit">Units</div>
+                <div class="tc total">Total Price</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="noitems t-center" ng-show="noItems()"><h5>You haven't added any products to your shopping cart
+                yet</h5></div>
+            <div class="tr" ng-repeat="product in products" ng-if="shoppingCart[product.$id].amount!=null">
+                <div class="tc eliminar" ng-click="deleteFromCart(product.$id)"><i
+                        class="fa fa-1x fa-trash-o btn red"></i></div>
+                <div class="tc imagen"><img ng-src="{{product.image}}" width="auto" height="120px">
+                </div>
+                <div class="tc namedescription">
+                    <label>{{product.name}}</label>
+
+                    <p>Lorem ipsum set amen Lorem ipsum set amen Lorem ipsum set amen Lorem ipsum set amen </p>
+                </div>
+                <div class="tc unitprice">{{product.Price}}€</div>
+                <div class="tc unit">
+                    <div class="plusUnits"><label class="btn green invert" ng-click="addToCart(product.$id,1)"><i
+                            class="fa fa-1x fa-plus"></i></label></div>
+                    <div class="amountUnits"><input type="number" ng-model="shoppingCart[product.$id].amount" readonly>
+                    </div>
+                    <div class="minusUnits"><label class="btn red invert" ng-click="removeFromCart(product.$id,1)"><i
+                            class="fa fa-1x fa-minus"></i></label></div>
+                </div>
+                <div class="tc total">{{(shoppingCart[product.$id].amount)*(product.Price) |
+                    number:2}}€
+                </div>
+            </div>
+        </div>
+        <div class="totalfinal tr">
+            <div class="row">
+                <div class="totalprice float-right">
+                    <label>{{totalPrice() | number:2}}&euro;</label>
+                </div>
+                <div class="totaltext float-right">
+                    <label>Total:</label>
+                </div>
+            </div>
+        </div>
+    </article>
+-->

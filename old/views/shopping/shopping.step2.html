@@ -1,0 +1,125 @@
+<header class="section group">
+    <div class="row">
+        <a ui-sref="index.shopping.step1" class="float-left btn blue cart full invert"><i
+                class="fa fa-1x fa-arrow-left"> </i><label>
+            Edit personal information</label> </a>
+
+        <h3 class="float-left">Address</h3>
+
+    </div>
+</header>
+
+<div class="row">
+    <div class="section group">
+        <form ng-submit="step2Submit(user.selectedMethod, user.address1, user.address2, user.city, user.state, user.zip, user.creditcardnumber, user.creditcardexpirationMoth, user.creditcardexpirationYear, user.creditcardcode)" class="span_3_of_4 float-right group">
+            <div class="formGroup group">
+                <label class="span_2_of_2 float-left">Select a payment method*</label>
+                <!--method-- ng-options="method for method in paymentMethods -->
+                <select  ng-model="user.selectedMethod">
+                    <option value="ondelivery">On delivery</option>
+                    <option value="creditcard">Credit Card</option>
+                </select>
+
+                <div  ng-if="user.selectedMethod=='ondelivery'">
+                    <label class="for">You'll have to pay to your local delivery company.</label>
+                </div>
+                <div ng-if="user.selectedMethod=='creditcard'">
+                    <label class="for">Enter your credit card required data</label>
+                </div>
+            </div>
+            <div ng-if="user.selectedMethod=='ondelivery'">
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">Address*</label>
+                    <!--address1-->
+                    <div class="span_1_of_2 float-left">
+                        <input type="text" ng-model="user.address1" placeholder="" required>
+                        <label class="for">Street address, P.O. box, company name, c/o</label>
+                    </div>
+                    <!--address2-->
+                    <div class="span_1_of_2 float-right">
+                        <input type="text" ng-model="user.address2" placeholder="" required>
+                        <label class="for">Apartment, suite, unit, building, floor, etc.</label>
+                    </div>
+                </div>
+                <!--City-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">City*</label>
+
+                    <div class=" span_2_of_2 float-left">
+                        <input type="text" id="city" ng-model="user.city" placeholder="">
+                        <label class="for">Palma de Mallorca, Madrid, Barcelona, etc.</label>
+                    </div>
+                </div>
+                <!--State/Province/Region-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">State/Province/Region*</label>
+
+                    <div class="span_2_of_2 float-right">
+                        <input type="text" id="state" ng-model="user.state" placeholder="">
+                        <label class="for">Baleares, Madrid, Catalunya, etc </label>
+                    </div>
+                </div>
+                <!--ZIP code-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">ZIP code*</label>
+
+                    <div class=" span_2_of_2 float-right">
+                        <input type="text" id="zip" ng-model="user.zip" placeholder="" pattern="[0-9]{1,8}" required>
+                        <label class="for">Ex: 07005 </label>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="user.selectedMethod=='creditcard'">
+                <!--CREDIT  CARD-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">Credit Card Number</label>
+
+                    <div class=" span_2_of_2 float-right">
+                        <input type="text" id="state" ng-model="user.creditcardnumber" placeholder="" required>
+                        <label class="for">Your credit card number</label>
+                    </div>
+                </div>
+                <div class="formGroup group">
+                    <!--EXPIRATION-->
+                    <div class=" col span_1_of_3">
+                        <select ng-model="user.creditcardexpirationMoth" required>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <label class="for">Expiration Moth</label>
+                    </div>
+                    <div class="col span_1_of_3">
+                        <input type="number" ng-model="user.creditcardexpirationYear" min="2015" max="2100">
+                        <label class="for">Expiration Year</label>
+                    </div>
+
+                    <div class="col span_1_of_3">
+                        <input type="text" ng-model="user.creditcardcode" placeholder="" required>
+                        <label class="for">Secret Code</label>
+                    </div>
+                </div>
+            </div>
+
+                <label class=" float-right"><input type="checkbox" id="terms" placeholder="" required> I agree to Terms and Condicions</label>
+
+
+
+            <div class="span_3_of_3 float-right">
+                <input type="submit" value="Complete Shopping" class="btn green invert full float-right"/>
+            </div>
+        </form>
+        <div class="span_1_of_4">
+        <shoppingresume></shoppingresume>
+</div>
+    </div>
+</div>

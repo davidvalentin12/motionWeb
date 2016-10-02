@@ -1,0 +1,107 @@
+{
+  "mocean": {
+    "orders": {
+      "$orderID": {
+        "TIMESTAMP": "date",
+        "address1": "string",
+        "address2": "string",
+        "cart": {
+          "$productID": {
+            "amount": "number",
+            "id": "number"
+          },
+          "totalPrice": "number"
+        },
+        "city": "string",
+        "email": "string[email]",
+        "firstname": "string",
+        "idNumber": "string[DNI/NIF]",
+        "idType": "string",
+        "lastname": "string",
+        "orderID": "string[$orderID]",
+        "selectedMethod": "string['ondelivery','creditcard']",
+        "state": "string",
+        "status": "string['Ordered']",
+        "tlf": "number",
+        "uid": "string[$userID]",
+        "zip": "number"
+      }
+    },
+    "products": [
+      {
+        "Capacity": "number",
+        "Category": "string['holder','cooler','glass'",
+        "Dimensions": "string",
+        "Price": "number",
+        "gif": "string['dir/dir/dir.end']",
+        "image": "string['dir/dir/dir.end']",
+        "name": "string",
+        "noVat": "number",
+        "set4": "number"
+      }
+    ],
+    "taglines": [
+      "String"
+    ],
+    "users": {
+      "$userID": {
+        "address1": "string",
+        "address2": "string",
+        "cart": {
+          "$productID": {
+            "amount": "number",
+            "id": "number"
+          },
+          "totalPrice": "number"
+        },
+        "city": "string",
+        "email": "string[email]",
+        "firstname": "string",
+        "idNumber": "string[DNI/NIF]",
+        "idType": "string",
+        "lastname": "string",
+        "orders": {
+          "$orderID": {
+            "TIMESTAMP": "date",
+            "address1": "string",
+            "address2": "string",
+            "cart": {
+              "$productID": {
+                "amount": "number",
+                "id": "number"
+              },
+              "totalPrice": "number"
+            },
+            "city": "string",
+            "email": "string[email]",
+            "firstname": "string",
+            "idNumber": "string[DNI/NIF]",
+            "idType": "string",
+            "lastname": "string",
+            "orderID": "string[$orderID]",
+            "selectedMethod": "string['ondelivery','creditcard']",
+            "state": "string",
+            "status": "string['Ordered']",
+            "tlf": "number",
+            "uid": "string[$userID]",
+            "zip": "number"
+          }
+        },
+        "selectedMethod": "ondelivery",
+        "state": "da",
+        "tlf": "619166373",
+        "zip": "07005"
+      }
+    }
+  },
+  "zapier_queue": {
+    "from": "string[email]",
+    "message": "string",
+    "name": "string",
+    "phone": "number",
+    "reply": "string[email]",
+    "subject": "string",
+    "text": "string",
+    "to": "string[email]"
+  }
+}

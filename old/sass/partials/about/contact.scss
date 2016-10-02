@@ -1,0 +1,95 @@
+#contact {
+  header{
+    padding: 10px 5px;
+    background-color: $blue1;
+    height: 55px;
+    color: white;
+    h3{
+      padding: 0 10px;
+      line-height: 34px;
+      @media screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+  section{
+    padding: 10px;
+    background-color: $grey4;
+    border-radius: 3px;
+    border: 1px solid $grey3;
+    &.span_1_of_2{
+      @media screen and (max-width: 630px) {
+        width:100%;
+        margin:10px 0 10px 0;
+
+      }
+    }
+    h4{
+      padding: 10px 5px;
+    }
+    ul{
+      list-style: none;
+      li{
+        margin-top:15px;
+        padding: 0 10px;
+
+        line-height: 40px;
+        background-color: $grey3;
+        border: 1px solid $grey2;
+        border-radius: 3px;
+        i{
+          position: relative;
+          top:5px;
+          margin-right:10px;
+          width: 30px;
+          &.fa-map-marker{
+            padding-left:4px;
+          }
+        }
+      }
+    }
+    /*
+    .qrcode{
+      margin-top:15px;
+      border-radius: 3px;
+      border: 1px solid $grey2;
+    }
+    */
+  map{
+    margin-top:15px;
+
+
+    line-height: 40px;
+    background-color: $grey3;
+    border: 1px solid $grey2;
+    border-radius: 3px;
+  }
+
+
+
+    form {
+      input, textarea {
+        display: block;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        font: 100%/1.6em 'Raleway', sans-serif;
+      }
+      input:last-child{
+        margin-bottom:0;
+      }
+      textarea {
+        padding-top: 5px;
+        height: 100px;
+        resize: none;
+      }
+      button{
+        width:40%
+      }
+    }
+  }
+
+}

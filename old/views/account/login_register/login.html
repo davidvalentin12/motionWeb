@@ -1,0 +1,41 @@
+<div ng-controller="loginController">
+    <header class="">
+        <div class="row">
+
+            <h3 class="float-left">Login</h3>
+        </div>
+
+
+    </header>
+    <div class="row">
+        <form class="span_3_of_4 float-middle group" ng-submit="loginSubmit()">
+            <h4>Enter your email and password to login to your account</h4>
+            <input type="email" placeholder="E-Mail" ng-model="email" required>
+            <input type="password" placeholder="Password" ng-model="password" required>
+            <div class="span_2_of_2"><input type="checkbox" id="remember" ng-model="remember" class="float-left">
+                Remember
+                me
+                <a class="small float-right" ng-click="login.resetPasswordPanel=true">Forgot password? Reset it!</a>
+            </div>
+            <label class="error message span_2_of_2">{{$scope.errorMessage}}</label>
+            <label class="small span_2_of_2 float-left"> <a ui-sref="index.account.register" >Don&apos;t have an account yet? Register!</a></label>
+
+            <input type="submit" class="btn green invert float-right" value="Login">
+
+            <div class="spacer float-right"></div>
+        </form>
+            <div class="popUpBackGround span2of2" ng-init="login.resetPasswordPanel=false"
+                 ng-show="login.resetPasswordPanel==true">
+                <div class="resetPasswordPanel span_1_of_3 float-middle">
+                    <label>Can't remember your password?</label><br>
+                    <label>Enter your email here and we'll send you a new one</label>
+                    <form ng-submit="sendResetPassword()">
+                        <input type="email" placeholder="Email" ng-model="email" required>
+                        <input class="btn red invert full float-left" value="Cancell"
+                               ng-click="login.resetPasswordPanel=false">
+                        <input type="submit" class="btn green invert  full float-right" value="Send">
+                    </form>
+                </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="spacer"></div>
+
+<div  id="contact" ng-controller="contactController" class="group">
+    <header>
+        <div class="row">
+        <h3>Contact</h3>
+            </div>
+    </header>
+        <div class="row">
+        <section class="col span_1_of_2 float-left">
+                <h4>Get in touch</h4>
+            <article>
+                <p>Don't be shy, call us, send us an E-mail, or follow us on your prefered social network.
+                    <br>Give us your opinion, we'll apreciate it!.
+                </p>
+
+
+            <ul>
+                <li><i class="fa fa-2x fa-phone-square"></i>619166373</li>
+                <li><i class="fa fa-2x fa-envelope-square"></i>davidvalentinsemail@gmail.com</li>
+                <li><i class="fa fa-2x fa-facebook-square"></i>facebook.com/david.valentin </li>
+                <li><i class="fa fa-2x fa-map-marker"></i>c/Example Street Andratx n23 07090 </li>
+            </ul>
+               <!-- <img class="qrcode" src="img/fbqrcode.png">-->
+                <map center="39.573145, 2.419937" zoom="13"></map>
+            </article>
+
+
+        </section>
+        <section class=" col span_1_of_2 float-left">
+                <h4>Send us a message</h4>
+            <form ng-submit="sendContactMessage()">
+                <input type="text" id="name" ng-model="name" placeholder="Name">
+                <input type="email" id="email" ng-model="email" placeholder="E-Mail">
+                <input type="tel" id="tel" ng-model="tel" placeholder="Telephone Number">
+                <textarea id="message" ng-model="message" placeholder="Your message"></textarea>
+                <input type="submit" class="btn green full " value="Send Message">
+            </form>
+        </section>
+        </div>
+</div>

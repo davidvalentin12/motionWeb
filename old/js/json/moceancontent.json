@@ -1,0 +1,90 @@
+[
+  {
+    "ITEM": "Champagne Flute ",
+    "Capacity": 166,
+    "Size": "classic",
+    "Price": 14.75,
+    "no VAT": 11.65,
+    "Set of 4 price B2C": "59"
+  },
+  {
+    "ITEM": " Wine Glass ",
+    "Capacity": 384,
+    "Size": "classic",
+    "Price": 17.25,
+    "no VAT": 13.63,
+    "Set of 4 price B2C": "69"
+  },
+  {
+    "ITEM": " Tumbler ",
+    "Capacity": 296,
+    "Size": "medium",
+    "Price": 12.25,
+    "no VAT": 9.68,
+    "Set of 4 price B2C": "49"
+  },
+  {
+    "ITEM": "Pilsner ",
+    "Capacity": 425,
+    "Size": "large",
+    "Price": 14.75,
+    "no VAT": 11.65,
+    "Set of 4 price B2C": "59"
+  },
+  {
+    "ITEM": "Small Pilsner ",
+    "Capacity": 285,
+    "Size": "small",
+    "Price": 12.25,
+    "no VAT": 9.68,
+    "Set of 4 price B2C": "49"
+  },
+  {
+    "ITEM": "Magnetic stainless steel disks for Cup holders",
+    "Capacity": null,
+    "Size": "",
+    "Price": 5.5,
+    "no VAT": 4.35,
+    "Set of 4 price B2C": "22"
+  },
+  {
+    "ITEM": "Ice Bucket ",
+    "Capacity": 2365,
+    "Size": "",
+    "Price": 44,
+    "no VAT": 34.76,
+    "Set of 4 price B2C": "-"
+  },
+  {
+    "ITEM": "Silicon place mat",
+    "Capacity": null,
+    "Size": "",
+    "Price": 49,
+    "no VAT": 38.71,
+    "Set of 4 price B2C": "-"
+  },
+  {
+    "ITEM": "Storage tray (for shelves)",
+    "Capacity": null,
+    "Size": "",
+    "Price": 25,
+    "no VAT": 19.75,
+    "Set of 4 price B2C": "-"
+  },
+  {
+    "ITEM": "Carrying tray",
+    "Capacity": null,
+    "Size": "",
+    "Price": 29,
+    "no VAT": 22.91,
+    "Set of 4 price B2C": "-"
+  },
+  {
+    "ITEM": "Beer cooler",
+    "Capacity": null,
+    "Size": "",
+    "Price": 9.9,
+    "no VAT": 7.82,
+    "Set of 4 price B2C": "-"
+  }
+]

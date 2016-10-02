@@ -1,0 +1,143 @@
+#products {
+  header{
+    padding: 10px 5px;
+    background-color: $blue1;
+    height: 55px;
+    color: white;
+    h3{
+      padding: 0 10px;
+      line-height: 34px;
+      @media screen and (max-width: 500px) {
+        font-size: 1.5em;
+      }
+    }
+    @media screen and (max-width: 420px) {
+      label{
+        display:none;
+      }
+    }
+
+  }
+  footer{
+    padding: 0 5px;
+  }
+
+  #filter {
+    height: 48px;
+    background-color: $grey3;
+    border-bottom: 1px solid $grey2;
+    border-top: 1px solid $grey2;
+          ul{
+            float:right;
+            list-style: none;
+            li{
+              &.searchFilter {
+                width: 230px;
+                input {
+                  display: block;
+                  width: 190px;
+                  height: 35px;
+                  line-height: 35px;
+                  font-size: 16px;
+                  font: 100%/1.6em 'Raleway', sans-serif;
+
+                }
+                i{
+                  display: block;
+                  height: 35px;
+                  line-height: 35px;
+                  font-size: 16px;
+                  padding-left:5px;
+                }
+              }
+              display:inline-block;
+              margin:0;
+              padding:5px 10px;
+              position:relative;
+              height: 45px;
+              vertical-align: middle;
+
+
+              label{
+                padding: 0 5px;
+                line-height: 35px;
+              }
+
+              ul{
+                position:absolute;
+                top:43px;
+                right:0px;
+                border: 1px solid $grey3;
+                visibility:hidden;
+                width: 200px;
+                z-index:1;
+                -webkit-box-shadow: 0 10px 6px -6px #777;
+                -moz-box-shadow: 0 10px 6px -6px #777;
+                box-shadow: 0 10px 6px -6px #777;
+                li{
+                  list-style: none;
+                  display:block;
+                  padding:0;
+                  margin:0;
+                  background-color: $grey5;
+                  width:inherit;
+                  label{
+                    display:block;
+                  }
+                  &.filterBtn{
+                    display: block;
+                    height: 35px;
+                    font-size: 16px;
+                    font: 100%/1.6em 'Raleway', sans-serif;
+                  }
+                }
+              }
+              &:hover, &:focus{
+                ul{
+                  visibility:visible;
+                  z-index:1;
+                }
+            }
+            }
+          }
+
+    }
+.products {
+  background-color: $grey6;
+  .product {
+    background-color: white;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid $grey3;
+    &:nth-child(5) {
+      margin-left: 0;
+    }
+    &:nth-child(9) {
+      margin-left: 0;
+    }
+    .productName {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-align: center;
+      min-height: 45px;
+    }
+    .productPrice {
+      display: block;
+      text-align: center;
+    }
+    .productImage {
+      width: 100%;
+    }
+    .productDetails {
+    }
+    img {
+      &.productImg {
+        width: 100%;
+        margin: 0 auto;
+        z-index: 0;
+      }
+    }
+  }
+}
+  }

@@ -1,0 +1,150 @@
+<div ng-controller="profileController">
+    <header class="">
+        <div class="row">
+            <h3 class="float-left">Account settings</h3>
+        </div>
+    </header>
+
+
+    <div class="row">
+
+
+        <section class="group">
+            <form ng-submit="updatePersonalInformation(user.firstname, user.lastname, user.idType, user.idNumber, user.tlf, user.email, user.password1, user.password2)"
+                  class="span_2_of_4 float-left form">
+                <h5>Personal Information</h5>
+
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">Identification *</label>
+                    <!--firstname-->
+                    <div class=" span_1_of_2 float-left">
+                        <input type="text" id="firstname" ng-model="user.firstname" placeholder="">
+                        <label for="firstname" class="for">Firstname</label>
+                    </div>
+                    <!--lastname-->
+                    <div class=" span_1_of_2 float-right">
+                        <input type="text" id="lastname" ng-model="user.lastname" placeholder="">
+                        <label for="Lastname" class="for">Lastname</label>
+                    </div>
+                    <!-- ID -->
+                    <div class=" span_1_of_2 float-left">
+                        <select ng-model="user.idType">
+                            <option value="nif">N.I.F</option>
+                            <option value="nie">N.I.E</option>
+                            <option value="dni">D.N.I</option>
+                        </select>
+                        <label class="for">Document type</label>
+                    </div>
+
+                    <div class=" span_1_of_2 float-right">
+                        <input ng-if="user.idType=='dni'" type="text" id="dn" ng-model="user.idNumber" placeholder="">
+                        <!--pattern="[0-9]{8}[a-zA-Z]" -->
+                        <input ng-if="user.idType=='nie'" type="text" id="dn" ng-model="user.idNumber" placeholder="">
+                        <!--pattern="[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]" -->
+                        <input ng-if="user.idType=='nif'" type="text" id="dn" ng-model="user.idNumber" placeholder="">
+                        <!-- pattern="[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]" -->
+                        <label for="Lastname" class="for">Document Number</label>
+                    </div>
+                </div>
+                <!--Contact-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">Contact *</label>
+                    <div class=" span_2_of_2 float-right">
+                        <input type="text" id="telephone" ng-model="user.tlf" placeholder="">
+                        <label class="for">Telephone number</label>
+                    </div>
+                </div>
+                <label>{{errorMessage}}</label>
+                <div class="span_1_of_3 float-right">
+                    <input type="submit" value="Update Personal Information" class="btn green float-right"/>
+                </div>
+            </form>
+            <form ng-submit="updateAddressInformation(user.address1, user.address2, user.city, user.state, user.zip)"
+                  class="span_2_of_4 float-right group">
+                <h5>Address Information</h5>
+
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">Address*</label>
+                    <!--address1-->
+                    <div class="span_1_of_2 float-left">
+                        <input type="text" ng-model="user.address1" placeholder="" required>
+                        <label class="for">Street address, P.O. box, company name, c/o</label>
+                    </div>
+                    <!--address2-->
+                    <div class="span_1_of_2 float-right">
+                        <input type="text" ng-model="user.address2" placeholder="" required>
+                        <label class="for">Apartment, suite, unit, building, floor, etc.</label>
+                    </div>
+                </div>
+                <!--City-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">City*</label>
+
+                    <div class=" span_2_of_2 float-left">
+                        <input type="text" id="city" ng-model="user.city" placeholder="">
+                        <label class="for">Palma de Mallorca, Madrid, Barcelona, etc.</label>
+                    </div>
+                </div>
+                <!--State/Province/Region-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">State/Province/Region*</label>
+
+                    <div class="span_2_of_2 float-right">
+                        <input type="text" id="state" ng-model="user.state" placeholder="">
+                        <label class="for">Baleares, Madrid, Catalunya, etc </label>
+                    </div>
+                </div>
+                <!--ZIP code-->
+                <div class="formGroup group">
+                    <label class="span_2_of_2 float-left">ZIP code*</label>
+
+                    <div class=" span_2_of_2 float-right">
+                        <input type="text" id="zip" ng-model="user.zip" placeholder="" pattern="[0-9]{1,8}" required>
+                        <label class="for">Ex: 07005 </label>
+                    </div>
+                </div>
+
+
+                <div class="span_1_of_3 float-right">
+                    <input type="submit" value="Update Address Information" class="btn green float-right"/>
+                </div>
+            </form>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <section class="group">
+
+            <form ng-submit="changePassword()" class="col span_2_of_4  float-right group">
+                <h4>Change password</h4>
+                <label>Password</label>
+                <input type="password" ng-model="password" placeholder="Current Password">
+                <label>New password:</label>
+                <input type="password" placeholder="New password" ng-model="newPassword" required minlength="6">
+                <label>Repeat new password:</label>
+                <input type="password" placeholder="Repeat new password" ng-model="newPassword2" required>
+                <label>{{changePasswordMessage}}</label>
+                <input class="btn green float-right span_1_of_3" type="submit" value="Change password">
+            </form>
+            <form ng-submit="changeEmail()" class="span_2_of_4 float-right group">
+                <h4>Change email address</h4>
+                <label>Current email:</label>
+                <input type="email" ng-model="profile.userData.password.email" readonly>
+                <label>New email:</label>
+                <input type="email" placeholder="New email" ng-model="newEmail" required>
+                <label>Password</label>
+                <input type="password" placeholder="Password" ng-model="password" required>
+                <input class="btn green float-right span_1_of_3" type="submit" value="Change email">
+            </form>
+
+        </section>
+    </div>
+</div>

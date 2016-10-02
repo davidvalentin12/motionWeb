@@ -1,0 +1,46 @@
+#header{
+  position: fixed;
+  z-index: 2;
+  width:100%;
+}
+#wrapper {
+  min-height: 100vh;
+  position: relative;
+}
+#container {
+  .spacer{
+    height:60px;
+  }
+ // padding-bottom: 350px;
+  position:relative;
+}
+/*
+#footer {
+  position: absolute;
+  bottom: 0px;
+  min-height: 350px;
+}
+*/
+@import 'text';
+@import 'global';
+@import 'constants';
+@import 'columngrid';
+@import 'partials/mainnav';
+@import 'partials/home/home';
+@import 'partials/products/products';
+@import 'partials/products/selectedProduct';
+@import 'partials/products/cart';
+@import 'partials/shopping/shopping';
+@import 'partials/about/company';
+@import 'partials/about/contact';
+@import 'partials/account/account';
+@import 'partials/how/howitworks';
+@import 'partials/footer';
+@import 'scss/hover';
+
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+<div id="selectedProduct" ng-controller="selectedProductController">
+
+
+    <header class="">
+        <div class="row">
+            <a ui-sref="index.products" class="float-left btn blue invert full">
+                <i class="fa fa-1x fa-arrow-left"></i>
+                <label>Allproducts</label></a>
+
+            <h3 class="float-left">{{selectedProduct.name}}</h3>
+
+            <a ui-sref="index.products.cart" class=" float-right btn blue full invert cart">
+                <label>Cart </label>
+                <i class="fa fa-1x fa-shopping-cart"></i>
+
+            </a>
+        </div>
+    </header>
+
+
+    <div class="row">
+        <article id="productimg" class="col span_1_of_2">
+            <img ng-src="{{selectedProduct.image}}">
+        </article>
+        <article class="col span_1_of_2 productdetails">
+            <div class="span_2_of_2">
+                <h4>Description:</h4>
+            </div>
+            <div class="span_2_of_2">
+                <p class="description">{{selectedProduct.description}} </p>
+                <br>
+            </div>
+            <div class="span_2_of_2">
+                <ul>
+                    <li class=" float-left" ng-if="selectedProduct.Capacity!=null"><i
+                            class="fa fa-1x fa-arrows-alt"></i> Capacity:
+                        {{selectedProduct.Capacity}}ml
+                    </li>
+                    <li class=" float-left" ng-if="selectedProduct.Dimensions!=null"><i
+                            class="fa fa-1x fa-arrows-alt"></i> Dimension:
+                        {{selectedProduct.Dimensions}}cm
+                    </li>
+                </ul>
+                <a class="btn green float-right" ng-if="selectedProduct.gif!=null" ng-click="global.gif=true">
+                    <i class="fa fa-1x fa-play-circle-o"></i><label>Video</label>
+                </a>
+
+                <div ng-if="selectedProduct.gif!=null" class="gifDisplay span_2_of_2" ng-init="global.gif=false"
+                     ng-show="global.gif==true"
+                     ng-click="global.gif=false">
+                    <img ng-click="global.gif=true" ng-if="selectedProduct.gif!=null" ng-src="{{selectedProduct.gif}}">
+                    <a ng-click="global.gif=false"><i class="fa fa-2x fa-times-circle-o"></i></a>
+                </div>
+            </div>
+            <div class="span_2_of_2 float-left prices">
+                <label class=" float-left pricetext">Unit price:</label>
+                <label class="price">{{selectedProduct.Price}}&euro;</label>
+                <a class="addcart float-right btn red full invert active" ng-click="addToCart(selectedProductID,1)">
+                    <label>Add 1 to cart</label>
+                    <i class="fa fa-1x fa-cart-plus"></i>
+                </a>
+            </div>
+            <br><br>
+
+            <div class="span_2_of_2 float-left prices" ng-if="selectedProduct.set4!=null">
+                <label class=" float-left pricetext">Pack of 4 price:</label>
+                <label class="price">{{selectedProduct.set4}}&euro;</label>
+                <a class="addcart float-right btn red full invert active" ng-click="addToCart(selectedProductID , 4)">
+                    <label>Add</label> 4 <label>to cart </label>
+                    <i class="fa fa-1x fa-cart-plus"></i>
+                </a>
+            </div>
+        </article>
+    </div>
+</div>

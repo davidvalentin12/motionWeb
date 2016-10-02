@@ -1,0 +1,41 @@
+<div id="orders">
+    <header class="">
+        <div class="row">
+            <h3 class="float-left">Your orders</h3>
+        </div>
+    </header>
+    <div class="row">
+    <table ng-table class="group orderReviews" ng-controller="orderTableController">
+        <!--
+        <thead>
+        <tr>
+            <th class="orderDate">Order Date</th>
+            <th class="orderID">Order ID</th>
+            <th class="orderedProducts">Products</th>
+            <th class="orderTotalPrice">Price</th>
+            <th class="orderPaymentMethod">Payment</th>
+            <th class="orderStatus">Status</th>
+        </tr>
+    http://ng-table.com/#/demo/2-1
+        </thead>
+    -->
+
+        <tr class="orderReview" ng-repeat="order in userOrders">
+            <td data-title="'Order Date'" class="orderDate">{{order.TIMESTAMP | date:"MM/dd/yyyy"}}</td>
+            <td data-title="'Order ID'" class="orderID">{{order.orderID}}</td>
+            <td data-title="'Products'" class="orderedProducts">
+                <div class="product" ng-repeat="product in products" ng-if="order.cart[product.$id].amount!=null">
+                    <label class="productName">{{product.name}} </label>
+                    <label class="productAmount">x{{order.cart[product.$id].amount}}</label>
+                </div>
+            </td>
+            <td data-title="'Price'" class="orderTotalPrice">{{order.cart.totalPrice}}&euro;</td>
+            <td data-title="'Payment'" class="orderPaymentMethod" ng-if="order.selectedMethod='ondelivery'">On
+                delivery
+            </td>
+            <td data-title="'Status'" class="orderStatus">{{order.status}}</td>
+        </tr>
+
+    </table>
+       </div>
+</div>
