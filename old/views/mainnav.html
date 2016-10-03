@@ -1,16 +1,12 @@
 <header id="header">
-
     <div class="section group" ng-init="global.tab = 1">
         <div class="row" ng-controller="menuController">
             <i class="fa fa-bars fa-2x" ng-click="toggleDropDown()"></i>
-
             <a ui-sref="index.home">
                 <div class=" logo_wrapper">
                     <img src="img/logo.png">
                 </div>
             </a>
-
-
             <nav>
                 <ul class="dropdownnav" ng-show="dropDown">
                     <li ng-click="toggleDropDown()" ui-sref="index.home" class="hvr-underline-from-left"><i

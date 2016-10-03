@@ -1,0 +1,13 @@
+#header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+#wrapper {
+  min-height: 100vh;
+  position: relative; }
+
+#container {
+  position: relative; }
+  #container .spacer {
+    height: 60px; }
