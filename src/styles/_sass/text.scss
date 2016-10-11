@@ -1,0 +1,86 @@
+/* FONTS IMPORT */
+/* latin-ext */
+/* latin */
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+/*  Html
+----------------------------------------------------------------------------------------------------*/
+html{
+  font-size: 14px;
+}
+body {
+  font: 100%/1.6em 'Raleway', sans-serif;
+}
+
+a:focus {
+  outline: 1px dotted invert;
+}
+
+hr {
+  border: 0 #ccc solid;
+  border-top-width: 1px;
+  
+  clear: both;
+  height: 0;
+}
+
+/* Headings ----------------------------------------------------------------------------------------------------*/
+
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.3em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+/* Spacing
+----------------------------------------------------------------------------------------------------*/
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: square;
+}
+
+li {
+  margin-left: 0px;
+}
+
+p,
+dl,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+pre,
+table,
+address,
+fieldset {
+  margin-bottom: 0px;
+}
