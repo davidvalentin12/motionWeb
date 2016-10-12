@@ -1,0 +1,106 @@
+/* ----- Main Nav ----- */
+#header {
+  box-shadow: 0 0 1px;
+  min-height: 60px; }
+  #header a {
+    text-decoration: none;
+    color: black; }
+  #header .section.group {
+    background: #FFFFFF;
+    height: 60px; }
+  #header i.fa-bars {
+    display: none;
+    float: left; }
+  #header .logo_wrapper {
+    width: 25%;
+    float: left;
+    padding-top: 15px; }
+    #header .logo_wrapper img {
+      height: 30px;
+      margin-left: 10px; }
+  #header ul.dropdownnav {
+    display: none; }
+  #header ul.horizontalnav {
+    display: inline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    float: right;
+    text-transform: uppercase; }
+    #header ul.horizontalnav li {
+      font: bold 12px/30px 'Raleway', sans-serif;
+      display: inline-block;
+      margin-right: -4px;
+      position: relative;
+      padding: 15px 30px;
+      cursor: pointer;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      #header ul.horizontalnav li:hover ul, #header ul.horizontalnav li:focus ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        z-index: 3; }
+      #header ul.horizontalnav li ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding-left: 0;
+        margin-right: -4px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        -moz-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s; }
+        #header ul.horizontalnav li ul li {
+          background: #FFFFFF;
+          display: block;
+          z-index: 3; }
+          #header ul.horizontalnav li ul li:hover {
+            background: #FFFFFF; }
+
+@media only screen and (max-width: 870px) {
+  #header .section.group {
+    height: auto; }
+  #header i.fa-bars {
+    width: 20%;
+    display: block;
+    float: left;
+    padding: 15px 15px; }
+  #header .logo_wrapper {
+    width: 80%; }
+    #header .logo_wrapper img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+  #header ul.horizontalnav {
+    display: none; }
+  #header ul.dropdownnav {
+    background: #FFFFFF;
+    float: left;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold; }
+    #header ul.dropdownnav li {
+      width: 90%;
+      padding: 10px 5%; }
+      #header ul.dropdownnav li ul {
+        display: none; }
+      #header ul.dropdownnav li:focus ul {
+        -webkit-transition: height 0.3s ease-in;
+        -moz-transition: height 0.3s ease-in;
+        -o-transition: height 0.3s ease-in;
+        transition: height 0.3s ease-in;
+        color: black;
+        display: block; }
+        #header ul.dropdownnav li:focus ul li {
+          list-style: none; } }

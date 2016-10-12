@@ -1,20 +1,20 @@
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  /**
-   * @ngdoc overview
-   * @name
-   *
-   * @description
-   *
-   */
-  angular.module(
-      'motion',
+    /**
+     * @ngdoc overview
+     * @name
+     *
+     * @description
+     *
+     */
+    angular.module(
+        'motion',
 
-      // DEPENDENCIES
-      [
-
-        //'dvm.templates',
-      ]);
+        // DEPENDENCIES
+        [
+            'ui.router'
+            //'dvm.templates',
+        ]);
 
 }());

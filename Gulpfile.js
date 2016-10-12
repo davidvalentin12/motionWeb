@@ -419,8 +419,8 @@
 
     tScriptPaths.push(CONFIG.SRC_SCRIPT_PATH + '**/*.js');
 
-      tScriptPaths.push('!' + CONFIG.SRC_SCRIPT_PATH + '_configs/**/*.js');
-      tScriptPaths.push('!' + CONFIG.SRC_SCRIPT_PATH + '**/*.spec.js');
+    tScriptPaths.push('!' + CONFIG.SRC_SCRIPT_PATH + '_configs/**/*.js');
+    tScriptPaths.push('!' + CONFIG.SRC_SCRIPT_PATH + '**/*.spec.js');
 
     // read all files from the scrip path
     return gulp.src(tScriptPaths)
@@ -443,7 +443,7 @@
   function _generateSassGlob() {
     var tSassGlob;
 
-      tSassGlob = [CONFIG.SRC_STYLE_PATH + '**/*.scss'];
+    tSassGlob = [CONFIG.SRC_STYLE_PATH + '**/*.scss', '!'+CONFIG.SRC_STYLE_PATH + '**_styles/*.scss'];
 
 
     if (CONFIG.SASS_GLOB) {

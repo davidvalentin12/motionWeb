@@ -8,12 +8,12 @@
      *
      */
 
-    angular.module('motion').component('main', {
+    angular.module('motion').component('motionMain', {
             bindings: {
             },
             controller: mainCtrl,
             controllerAs: 'mainCtrl',
-            templateUrl: 'src/scripts/main/mainCtrl.tpl.html'
+            templateUrl: 'src/scripts/main/motionMain.tpl.html'
         }
     );
 

@@ -1,6 +1,6 @@
-@import '../constants';
 
 /* ----- Main Nav ----- */
+
 
 #header {
   box-shadow: 0 0 1px;
@@ -12,7 +12,7 @@
   }
   .section.group {
 
-    background:rgba(255,255,255,0.5);
+    background:#FFFFFF;
 
 
     height: 60px;
@@ -45,7 +45,7 @@
 
     li {
       //4 principales
-      font: bold 12px/30px $font-stack;
+      font: bold 12px/30px 'Raleway', sans-serif;
       display: inline-block;
       margin-right: -4px;
       position: relative;
@@ -53,7 +53,6 @@
       cursor: pointer;
       -webkit-transition: all 0.2s;
       -moz-transition: all 0.2s;
-      -ms-transition: all 0.2s;
       -o-transition: all 0.2s;
       transition: all 0.2s;
       &:hover, &:focus {
@@ -72,6 +71,7 @@
         top: 60px;
         left: 0;
         width: 100%;
+        padding-left: 0;
         margin-right: -4px;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
@@ -79,21 +79,18 @@
         display: none;
         opacity: 0;
         visibility: hidden;
-        -webkit-transiton: opacity 0.2s;
         -moz-transition: opacity 0.2s;
-        -ms-transition: opacity 0.2s;
         -o-transition: opacity 0.2s;
-        -transition: opacity 0.2s;
         li {
-          //background: $blue1;
-          background:rgba(255,255,255,0.7);
+          //background: #003366;
+          background:#FFFFFF;
           display: block;
           //color: #fff;
           //text-shadow: 0 -1px 0 #000;
           z-index: 3;
           &:hover {
-            //background: #6699CC#02599e;
-            background:rgba(255,255,255,0.7);
+            //background: #6699CC;
+            background:#FFFFFF;
           }
         }
       }
@@ -103,66 +100,65 @@
 
 @media only screen and (max-width: 870px) {
   #header {
-    .section.group {
-      height: auto;
-    }
-    i.fa-bars{
-      width:20%;
-      display:block;
-      float:left;
-      padding: 15px 15px;
-    }
+      .section.group {
+        height: auto;
+      }
+      i.fa-bars{
+        width:20%;
+        display:block;
+        float:left;
+        padding: 15px 15px;
+      }
       .logo_wrapper {
         width: 80%;
-          img {
-            position:absolute;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-          }
+        img {
+          position:absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+        }
       }
 
 
-    ul.horizontalnav{
-      display:none;
-    }
-    ul.dropdownnav {
-      background:rgba(255,255,255,0.7);
-      float: left;
-      display:block;
-      width:100%;
-      text-transform: uppercase;
-      font-weight: bold;
-      li {
-        width: 90%;
-        padding:10px 5%;
-        ul{
-          display:none;
-        }
-        &:focus, &:hover {
-          //background-color: #02599e;
-          //color: #fff;
-        }
-        &:focus{
+      ul.horizontalnav{
+        display:none;
+      }
+      ul.dropdownnav {
+        background:#FFFFFF;
+        float: left;
+        display:block;
+        width:100%;
+        text-transform: uppercase;
+        font-weight: bold;
+        li {
+          width: 90%;
+          padding:10px 5%;
           ul{
-            -webkit-transition: height 0.3s ease-in;
-            -moz-transition: height 0.3s ease-in;
-            -o-transition: height 0.3s ease-in;
-            -ms-transition: height 0.3s ease-in;
-            transition: height 0.3s ease-in;
-            color: black;
-            display:block;
-            li{
-              list-style: none;
-              &:hover{
-                //background-color: #6699CC#02599e;
-                //color: #fff;
+            display:none;
+          }
+          &:focus, &:hover {
+            //background-color: #02599e;
+            //color: #fff;
+          }
+          &:focus{
+            ul{
+              -webkit-transition: height 0.3s ease-in;
+              -moz-transition: height 0.3s ease-in;
+              -o-transition: height 0.3s ease-in;
+              transition: height 0.3s ease-in;
+              color: black;
+              display:block;
+              li{
+                list-style: none;
+                &:hover{
+                  //background-color: #6699CC
+                  //color: #fff;
+                }
               }
             }
           }
         }
       }
     }
-  }
 }
 

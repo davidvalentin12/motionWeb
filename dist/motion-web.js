@@ -1,20 +1,42 @@
 (function () {
     'use strict';
 
-    angular.module('motion').config( function ($stateProvider, $window, simpleLogin) {
+    /**
+     * @ngdoc overview
+     * @name
+     *
+     * @description
+     *
+     */
+    angular.module(
+        'motion',
+
+        // DEPENDENCIES
+        [
+            'ui.router'
+            //'dvm.templates',
+        ]);
+
+}());
+
+(function () {
+    'use strict';
+
+    angular.module('motion').config(["$stateProvider", function ($stateProvider) {
+
         $stateProvider
             .state('index', {
                 url: '',
 
                 views: {
                     'header@': {
-                        templateUrl: 'views/mainnav.html'
+                        template: '<main-nav></main-nav>'
                     },
                     'container@': {
-                        templateUrl: 'views/home/home.html'
+                        template: 'src/scripts/home/home.tpl.html'
                     },
                     'footer@': {
-                        templateUrl: 'views/mainfooter.html'
+                        template: 'src/scripts/mainfooter.html'
                     }
                 }
             })
@@ -31,8 +53,8 @@
                         templateUrl: 'views/mainfooter.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                    //$window.scrollTo(0,0);
                 }
             })
             /*-------------PRODUCTS-PRODUCTS-PRODUCTS------------*/
@@ -46,8 +68,8 @@
                         templateUrl: 'views/products/products.filter.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })/*--------------SELECTED-PRODUCT------------*/
             .state('index.products.product', {
@@ -58,8 +80,8 @@
                         controller: 'selectedProductController'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                    //$window.scrollTo(0,0);
                 }
             })
             /*--------------SHOPPING-CART------------*/
@@ -71,8 +93,8 @@
 
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             /*-------------SHOPPING-SHOPPING-SHOPPING------------*/
@@ -86,8 +108,8 @@
                         templateUrl: 'views/shopping/shopping.step1.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             .state('index.shopping.step1', {
@@ -97,8 +119,8 @@
                         templateUrl: 'views/shopping/shopping.step1.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             .state('index.shopping.step2', {
@@ -108,8 +130,8 @@
                         templateUrl: 'views/shopping/shopping.step2.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             .state('index.shopping.step3', {
@@ -119,8 +141,8 @@
                         templateUrl: 'views/shopping/shopping.step3.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                    //$window.scrollTo(0,0);
                 }
             })
             /*-------------COMPANY-COMPANY-COMPANY------------*/
@@ -131,8 +153,8 @@
                         templateUrl: 'views/company/company.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             /*-------------CONTACT-CONTACT-CONTACT------------*/
@@ -143,8 +165,8 @@
                         templateUrl: 'views/contact/contact.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             /*-------------HOW-HOW-HOW------------*/
@@ -159,8 +181,8 @@
                         controller: 'howPropertieController'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                    //$window.scrollTo(0,0);
                 }
             })
             /*-------------HOW-PROPERTIES------------*/
@@ -173,8 +195,8 @@
                         controller: 'howPropertieController'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
             })
             /*-------------ACCOUNT------------*/
@@ -188,8 +210,8 @@
                         templateUrl: 'views/account/login_register/register.html'
                     }
                 },
-                onEnter: function($window){
-                    $window.scrollTo(0,0);
+                onEnter: function(){
+                   // $window.scrollTo(0,0);
                 }
 
             })
@@ -202,11 +224,11 @@
                     }
                 }
                 ,
-                onEnter: function($window, simpleLogin, $location){
+                onEnter: function( ){
                     if(simpleLogin.connected){
                         $location.path('/home');
                     }
-                    $window.scrollTo(0,0);
+                    // $window.scrollTo(0,0);
                 }
             })
             /*--------ACCOUNT-LOGIN-------*/
@@ -218,11 +240,11 @@
 
                     }
                 },
-                onEnter: function($window, simpleLogin, $location){
+                onEnter: function(){
                     if(simpleLogin.connected){
                         $location.path('/home');
                     }
-                    $window.scrollTo(0,0);
+                    // $window.scrollTo(0,0);
                 }
 
             })
@@ -234,33 +256,182 @@
                         templateUrl: 'views/account/profile.html'
                     }
                 },
-                onEnter: function($window, simpleLogin, $location){
+                onEnter: function(){
                     if(simpleLogin==null){
                         $location.path('/home');
                     }
-                    $window.scrollTo(0,0);
+                    // $window.scrollTo(0,0);
                 }
             })
             /*------ACCOUNT-ORDERS--------*/
-            .state('index.account.orders', {
-                url: '/orders',
-                views: {
-                    'accountState@index.account':{
-                        templateUrl: 'views/account/orders.html'
-                    }
-                },
-                onEnter: function($window, simpleLogin, $location){
-                    if(simpleLogin==null){
-                        $location.path('/home');
-                    }
-                    $window.scrollTo(0,0);
-                }
-            })
-    })
-    .run( function ($rootScope, $state, $stateParams) {
+            //.state('index.account.orders', {
+            //    url: '/orders',
+            //    views: {
+            //        'accountState@index.account':{
+            //            templateUrl: 'views/account/orders.html'
+            //        }
+            //    },
+            //    onEnter: function(){
+            //        if(simpleLogin==null){
+            //            $location.path('/home');
+            //        }
+            //        // $window.scrollTo(0,0);
+            //    }
+            //})
+    }])
+    .run( ["$rootScope", "$state", "$stateParams", function ($rootScope, $state, $stateParams) {
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
         $state.transitionTo('index.home');
-    })
+    }])
 
 })();
+angular.module('mocean.home', ['homeFactory'])
+    /* main video controller */
+    .controller('mainVideoController', ["$scope", function ($scope) {
+        var myVideo = document.getElementById("mainVideo");
+        $scope.playVid = function () {
+            myVideo.play();
+        };
+        $scope.pauseVid = function () {
+            myVideo.pause();
+        };
+    }])
+
+    .controller('productsOnMainController', ["$scope", "allProductsFactory", function ($scope, allProductsFactory) {
+        $scope.products = allProductsFactory.products;
+        $scope.shownItems = [1, 8, 9];
+
+        /* seleccionar productos para la main page */
+
+        $scope.productIsShown = function (id) {
+            for (var i = 0; i <= $scope.shownItems.length; i++) {
+                if ($scope.shownItems[i] == id) {
+                    return true;
+                }
+            }
+            return false;
+        };
+    }])
+
+    /* Taglines controller*/
+    .controller('taglinesController', ["$scope", "$interval", "taglineFactory", function ($scope, $interval, taglineFactory) {
+        $scope.taglines = taglineFactory.taglines;
+        $scope.selectedId = 1;
+        $scope.taglines.$loaded().then(function () {
+            var numTaglines = $scope.taglines.length;
+            $interval(function () {
+                $scope.selectedId = $scope.selectedId++;
+                var max = numTaglines;
+                if ($scope.selectedId >= max) {
+                    $scope.selectedId = 0;
+                }
+                $scope.selectedId++;
+            }, 8000, 0);
+        });
+        $scope.x = {item: 1};
+    }])
+
+    /* Menu/Navigation controller */
+    .controller('menuController', ["$scope", "$window", function ($scope, $window) {
+        $scope.dropDown = false;
+        $scope.toggleDropDown = function () {
+            $scope.dropDown = !$scope.dropDown;
+        };
+        $scope.tabChange = function (tab) {
+            global.tab = tab;
+            console.log($window.tab);
+        }
+    }])
+;
+angular.module('homeFactory', ['firebase'])
+
+    .factory('taglineFactory', ["$firebaseArray", function ($firebaseArray) {
+        var taglinesRef = new Firebase('https://blistering-heat-482.firebaseio.com/mocean/taglines');
+        var taglineFactory = {};
+        taglineFactory.taglines= $firebaseArray(taglinesRef);
+        return taglineFactory;
+    }])
+
+;
+(function () {
+    'use strict';
+
+    /**
+     * @ngdoc directive
+     * @name motion.main.components:main
+     * @description
+     *
+     */
+
+    angular.module('motion').component('motionMain', {
+            bindings: {
+            },
+            controller: mainCtrl,
+            controllerAs: 'mainCtrl',
+            templateUrl: 'src/scripts/main/motionMain.tpl.html'
+        }
+    );
+
+    /**
+     * @ngdoc controller
+     * @name motion.main.components:mainCtrl
+     * @description
+     *
+     */
+    function mainCtrl() {
+
+        var self = this;
+
+
+        
+
+
+    }
+})();
+
+(function () {
+    'use struct';
+
+    /**
+     * @ngdoc directive
+     * @name motion.main.components:mainNav
+     * @description
+     *
+     */
+
+    angular.module('motion').component('mainNav', {
+            bindings: {
+            },
+            controller: mainNavCtrl,
+            controllerAs: 'mainNavCtrl',
+            templateUrl: 'src/scripts/mainNav/mainNav.tpl.html'
+        }
+    );
+
+    /**
+     * @ngdoc controller
+     * @name motion.main.components:mainCtrl
+     * @description
+     *
+     */
+    function mainNavCtrl() {
+
+        var self = this;
+
+
+        self.dropDown = false;
+        self.toggleDropDown = function () {
+            $scope.dropDown = !$scope.dropDown;
+        };
+        self.tabChange = function (tab) {
+            global.tab = tab;
+            console.log($window.tab);
+        }
+
+
+
+
+    }
+
+}());

@@ -1,69 +1,68 @@
-@import '../_styles/constants';
 
 .blue1 {
-  background-color: $blue1;
+  background-color:#003366;
 }
 
 .blue2 {
-  background-color: $blue2;
+  background-color: #02599E
 }
 
 .blue3 {
-  background-color: $blue3;
+  background-color: #6699CC;
 }
 
 .blue4 {
-  background-color: $blue4;
+  background-color: #66CCFF;
 }
 
 .green1 {
-  background-color: $green1;
+  background-color: #1ECD97;
 }
 
 .green2 {
-  background-color: $green2;
+  background-color: #21E0A3;
 }
 
 .green3 {
-  background-color: $green3;
+  background-color: #D5E286;
 }
 
 .green4 {
-  background-color: $green4;
+  background-color: #EEEB80;
 }
 
 .red1 {
-  background-color: $red1;
+  background-color: #ff7878;
 }
 
 .red2 {
-  background-color: $red2;
+  background-color: #ff9999;
 }
 
 .red3 {
-  background-color: $red3;
+  background-color: #F9B48A;
 }
 
 .red4 {
-  background-color: $red4;
+  background-color:#FABC89;
 }
 
 .greyblack {
-  background-color: $greyblack;
-  color: $grey2;
+  background-color:  #333333;
+  color: #C4C4C4;
 }
 
 .grey1 {
-  background-color: $grey1;
-  color: $grey3;
+  background-color:#999999;
+  color: #EAEAEA;
 }
 
 .grey2 {
-  background-color: $grey2;
+  background-color: #C4C4C4;
 }
 
 .grey3 {
-  background-color: $grey3;
+  background-color: #EAEAEA;
 }
 
 .btn {
@@ -81,10 +80,10 @@
 
   &.white {
     &.full {
-      background: rgba(255, 255, 255, 1);
+      background: #FFFFFF;
     }
     &.empty {
-      background: rgba(255, 255, 255, 0);
+      background: #FFFFFF;
     }
     border-color: white;
     &:hover {
@@ -94,37 +93,37 @@
   }
   &.green {
     &.full {
-      background: rgba(255, 255, 255, 1);
+      background: #FFFFFF;
     }
-    border-color: rgb(30, 205, 151);
-    color: rgb(30, 205, 151);
-    background: rgba(255, 255, 255, 0.5);
+    border-color: #1ECD97;
+    color: #1ECD97;
+    background: #FFFFFF;
     &:hover {
-      background: rgb(30, 205, 151);
-      color: rgba(255, 255, 255, 1);
+      background: #1ECD97;
+      color: #FFFFFF;
     }
     &active {
-      border: 2px solid rgba(33, 224, 163, 1);
-      background: rgba(33, 224, 163, 1);
+      border: 2px solid #1ECD97;
+      background: #1ECD97;
       -webkit-transition: none;
       -moz-transition: none;
       -o-transition: none;
       transition: none;
     }
     &.invert {
-      border-color: rgb(30, 205, 151);
-      background: rgb(30, 205, 151);
-      color: rgba(255, 255, 255, 1);
+      border-color: #1ECD97;
+      background: #1ECD97;
+      color: #FFFFFF;
       &:hover {
-        color: rgb(30, 205, 151);
-        background: rgba(255, 255, 255, 0.5);
+        color: #1ECD97;
+        background: #FFFFFF;
         &.full {
-          background: rgba(255, 255, 255, 1);
+          background: #FFFFFF;
         }
       }
       &active {
-        border: 2px solid rgba(33, 224, 163, 1);
-        background: rgba(33, 224, 163, 1);
+        border: 2px solid #21E0A3;
+        background: #21E0A3;
         -webkit-transition: none;
         -moz-transition: none;
         -o-transition: none;
@@ -134,14 +133,14 @@
   }
   &.red {
     &.full {
-      background: rgba(255, 255, 255, 1);
+      background: #FFFFFF;
     }
     border-color: #FF7878;
     color: #FF7878;
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFFFF;
     &:hover {
       background: #FF7878;
-      color: rgba(255, 255, 255, 1);
+      color: #FFFFFF;
     }
     &:active {
       border: 2px solid #ff7878;
@@ -154,25 +153,25 @@
     &.invert {
       border-color: #FF7878;
       background: #FF7878;
-      color: rgba(255, 255, 255, 1);
+      color: #FFFFFF;
       &:hover {
         color: #FF7878;
-        background: rgba(255, 255, 255, 0.5);
+        background: #FFFFFF;
         &.full {
-          background: rgba(255, 255, 255, 1);
+          background: #FFFFFF;
         }
       }
       &.active{
         &:hover {
           border-color: #FF7878;
           background: #FF7878;
-          color: rgba(255, 255, 255, 1);
+          color: #FFFFFF;
         }
         &:active {
           color: #FF7878;
-          background: rgba(255, 255, 255, 0.5);
+          background: #FFFFFF;
           &.full {
-            background: rgba(255, 255, 255, 1);
+            background: #FFFFFF;
           }
         }
       }
@@ -180,13 +179,13 @@
   }
   &.blue {
     &.full {
-      background: rgba(255, 255, 255, 1);
+      background: #FFFFFF;
     }
     color: #779ECB;
-    background: rgba(255, 255, 255, 0.5);
+    background: #FFFFFF;
     border-color: #779ECB;
     &:hover {
-      color: rgba(255, 255, 255, 1);
+      color: #FFFFFF;
       background: #779ECB;
     }
     &:active {
@@ -199,13 +198,13 @@
     }
     &.invert {
       background: #779ECB;
-      color: rgba(255, 255, 255, 1);
+      color: #FFFFFF;
       border-color: #779ECB;
       &:hover {
         color: #779ECB;
-        background: rgba(255, 255, 255, 0.5);
+        background: #FFFFFF;
         &.full {
-          background: rgba(255, 255, 255, 1);
+          background: #FFFFFF;
         }
       }
       &:active {
@@ -217,17 +216,6 @@
         transition: none;
       }
     }
-  }
-}
-
-hr {
-  &.gradient {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
   }
 }
 
@@ -266,10 +254,10 @@ a {
   width: 100%;
   height: 100vh;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: #000000;
 }
 
-&.small {
+.small {
   font-size: 75%;
 }
 
@@ -282,14 +270,14 @@ a {
 
 form {
   padding: 10px;
-  background-color: $grey5;
-  border: 1px solid $grey3;
+  background-color: #EDEDED;
+  border: 1px solid #EAEAEA;
   border-radius: 1px;
   margin: 20px auto;
   .formGroup {
     margin-bottom: 5px;
-    background-color: $grey3;
-    border: 1px solid $grey2;
+    background-color: #EAEAEA;
+    border: 1px solid #C4C4C4;
     padding: 5px;
   }
   input[type='text'], input[type='email'], input[type='password'], input[type='number'], textarea, button, select {

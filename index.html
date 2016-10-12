@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="elseis.playFilter">
+<html ng-app="motion">
 <head>
-    <title>Elseis Play Filter</title>
+    <title>Motion</title>
 
     <!-- ################################
    ### [BEGIN] CSS DEPENDENCIES ###
    ################################ -->
 
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/hover/css/hover.css">
     <!-- endinject -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://alltheater.elseis.es/wp-content/plugins/bwp-minify/min/?f=wp-content/plugins/contact-form-7/includes/css/styles.css,wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css,wp-content/plugins/woocommerce/assets/css/woocommerce.css,wp-content/themes/videotouch/css/redfont.css,wp-content/themes/videotouch/css/widgets.css,wp-content/themes/videotouch/css/bootstrap.css,wp-content/themes/videotouch/css/prettyphoto.css,wp-content/themes/videotouch/css/style.css,wp-content/plugins/dhvc-form/assets/fonts/font-awesome/css/font-awesome.min.css,wp-content/plugins/dhvc-form/assets/css/style.css,wp-content/uploads/js_composer/custom.css
-    ">
+
     <!-- inject:css -->
-    <link rel="stylesheet" href="src/styles/animate.css">
-    <link rel="stylesheet" href="src/styles/dvmStyles.css">
-    <link rel="stylesheet" href="src/scripts/elseisPlay/sass/elseisPlay.css">
-    <link rel="stylesheet" href="src/scripts/elseisPlayFilter/sass/elseisPlayFilter.css">
-    <link rel="stylesheet" href="src/scripts/elseisPlaysDisplay/sass/elseisPlaysDisplay.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/scripts/main/sass/main.css">
+    <link rel="stylesheet" href="src/scripts/mainNav/sass/mainnav.css">
     <!-- endinject -->
 
     <!-- ##############################
@@ -28,7 +25,7 @@
 </head>
 <body ng-controller="TestCtrl as test" >
 <!-- Example Usage -->
-<elseis-play-filter taxonomy="test.config.taxonomy" term="test.config.term" kw="test.config.kw"></elseis-play-filter>
+<motion-main></motion-main>
 
 <!-- ###############################
      ### [BEGIN] JS DEPENDENCIES ###
@@ -36,21 +33,17 @@
 
 <!-- bower:js -->
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/lodash/lodash.js"></script>
-<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/angular-mocks/angular-mocks.js"></script>
-<script src="bower_components/restangular/dist/restangular.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 <!-- endinject -->
 
 <!-- inject:js -->
 <script src="src/scripts/app.js"></script>
-<script src="src/scripts/elseisPlayFilter/shared/elseisPlayFilter.service.js"></script>
-<script src="src/scripts/elseisPlayFilter/shared/elseisPlayFilter.filters.js"></script>
-<script src="src/scripts/elseisPlaysDisplay/elseisPlaysDisplay.component.js"></script>
-<script src="src/scripts/elseisPlayFilter/elseisPlayFilter.component.js"></script>
-<script src="src/scripts/elseisPlay/elseisPlay.component.js"></script>
-<script src="src/scripts/config/restangular.config.js"></script>
+<script src="src/scripts/mainNav/mainNav.component.js"></script>
+<script src="src/scripts/main/motionMain.component.js"></script>
+<script src="src/scripts/home/homeFactory.js"></script>
+<script src="src/scripts/home/homeCtrl.js"></script>
+<script src="src/scripts/config/stateProvider.config.js"></script>
 <!-- endinject -->
 
 <!-- #############################
@@ -58,7 +51,7 @@
      ############################# -->
 
 <script type="text/javascript">
-    angular.module('elseis.playFilter')
+    angular.module('motion')
             .controller('TestCtrl', function($scope) {
                 var self = this;
 

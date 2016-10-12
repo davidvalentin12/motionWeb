@@ -6,7 +6,8 @@
   "main": [
     "./dist/motion-web.js",
     "./dist/motion-web.templates.js",
-    "./dist/css/styles.css"
+    "./dist/css/styles.css",
+    "./dist/images/logo.png"
   ],
   "authors": [
     "David Möhring <davidvalentinsemail@gmail.com>"
@@ -29,6 +30,7 @@
   "dependencies": {
     "angular": "~1.5",
     "font-awesome": "~4.5.0",
+    "angular-ui-router": "~0.3.1",
     "hover": "~2.0.2"
   },
   "devDependencies": {

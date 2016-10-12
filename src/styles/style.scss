@@ -10,11 +10,14 @@
 
 #container {
   .spacer{
+
     height:60px;
   }
  // padding-bottom: 350px;
   position:relative;
 }
+
+
 /*
 #footer {
   position: absolute;
@@ -22,10 +25,9 @@
   min-height: 350px;
 }
 */
-@import '_sass/text';
-@import '_sass/global';
-@import '_sass/constants';
-@import '_sass/columngrid';
+@import '../_styles/text';
+@import '../_styles/global';
+@import '../_styles/columngrid';
 
 
 
